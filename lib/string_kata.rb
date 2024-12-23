@@ -1,6 +1,6 @@
 class StringKata
   def self.add(string_number)
-    return 0 if string_number.empty?
+    return 0 if string_number.blank?
 
     delimiter, processed_numbers = extract_delimiter_and_numbers(string_number)
     parsed_numbers = parse_numbers(processed_numbers, delimiter)

@@ -6,6 +6,10 @@ RSpec.describe StringKata do
       expect(StringKata.add("")).to eq(0)
     end
 
+    it 'for empty string return zero' do
+      expect(StringKata.add(nil)).to eq(0)
+    end
+
     it 'for a single number returns the number' do
       expect(StringKata.add("10")).to eq(10)
     end
