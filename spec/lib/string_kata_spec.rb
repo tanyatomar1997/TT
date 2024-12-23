@@ -19,7 +19,7 @@ RSpec.describe StringKata do
     end
 
     it 'handles custom delimiters' do
-      expect(StringKata.add("//;\n1;2")).to eq(3)
+      expect(StringKata.add("//;\n1;2;4;6")).to eq(13)
     end
 
     it 'raises an error when a negative number is included' do
