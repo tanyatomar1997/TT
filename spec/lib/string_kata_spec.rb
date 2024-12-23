@@ -13,5 +13,17 @@ RSpec.describe StringKata do
     it 'for two numbers separated by a comma returns the sum ' do
       expect(StringKata.add("1,5")).to eq(6)
     end
+
+    it 'handles newlines between numbers' do
+      expect(StringKata.add("1\n2,3")).to eq(6)
+    end
+
+    it 'handles custom delimiters' do
+      expect(StringKata.add("//;\n1;2")).to eq(3)
+    end
+
+    it 'raises an error when a negative number is included' do
+      expect { StringKata.add("1,-2,3") }.to raise_error("negative numbers not allowed -2")
+    end
   end
 end
